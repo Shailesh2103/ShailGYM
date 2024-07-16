@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "Proxima";
+  src: url("../font/Proxima-Nova-Font.otf");
+}
+* {
+  font-family: "Proxima";
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-weight: 800;
+}
+
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+  border: none;
+}
+
+.btn1 {
+  height: 55px;
+  width: 140px;
+  color: white;
+  outline: none;
+  border: none;
+  background: linear-gradient(90deg, #f5634b 0%, #fe9418 100%);
+  transition: 1s;
+  text-transform: capitalize;
+}
+
+.btn1:hover {
+  background: linear-gradient(90deg, #fe9418 0%, #f5634b 100%);
+  transition: all 1s;
+}
+
+.back {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.8s;
+}
+
+.back:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.back::before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(90deg, #fe9418 0%, #f5634b 100%);
+  z-index: -1;
+  transition: all 0.8s;
+}
+
+.back:hover::before {
+  height: 100%;
+}
+
+span {
+  color: rgb(236, 83, 83);
+  cursor: pointer;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #f5634b 0%, #fe9418 100%);
+  width: 100%;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  transform-origin: left;
+}
+
+.nav-link:hover::after {
+  transform: scale(1);
+}
+
+.main {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/young-fit.jpeg) no-repeat;
+  background-image: url(../img/young-fit.jpeg) no-repeat;
+  height: 110vh;
+  background-size: cover;
+}
+.main h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: white;
+}
+
+.details {
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+.details h5 {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.details a {
+  text-decoration: none;
+  color: rgb(236, 83, 83);
+}
+.details .back:hover a {
+  color: white;
+  cursor: pointer;
+}
+
+.more h2 {
+  font-weight: 800;
+}
+.more p {
+  opacity: 0.6;
+}
+
+.discovber {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/water.jpeg) no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.services h1 {
+  font-weight: 800;
+  font-size: 2.8rem;
+}
+.services h5 {
+  font-weight: 700;
+}
+
+.course h1 {
+  font-weight: 800;
+  font-size: 2.8rem;
+}
+.course .card {
+  border: none;
+}
+.course p {
+  opacity: 0.7;
+}
+.course .btn2 {
+  height: 55px;
+  width: 80%;
+  color: white;
+  outline: none;
+  border: none;
+  background: linear-gradient(90deg, #f5634b 0%, #fe9418 100%);
+  transition: 1s;
+}
+.course .btn2:hover {
+  background: linear-gradient(90deg, #fe9418 0%, #f5634b 100%);
+  transition: all 1s;
+}
+
+.gallery h1 {
+  font-weight: 800;
+  font-size: 2.8rem;
+}
+.gallery p {
+  opacity: 0.7;
+}
+
+.client-bg {
+  background: #fae8c4;
+}
+.client-bg .client-c {
+  padding: 15px;
+}
+.client-bg img {
+  width: 110px !important;
+  height: auto !important;
+}
+.client-bg p {
+  font-size: 16px;
+  margin-top: 7px;
+  text-transform: capitalize;
+}
+.client-bg h5 {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.client-bg .c-footer-icons .icons-social {
+  width: 24px !important;
+}
+
+/* responcive */
+@media (max-width: 575.98px) {
+  .offcanvas.showing,
+  .offcanvas.show:not(.hiding) {
+    width: 83%;
+    background: black;
+  }
+  .main .text-area-main {
+    display: flex;
+    justify-content: center;
+    height: 72%;
+    flex-direction: column;
+  }
+  .main h1 {
+    font-size: 2rem;
+  }
+  .main .btn1 {
+    height: 38px;
+    width: 30%;
+  }
+  .services h1 {
+    font-size: 1.8rem;
+  }
+  .services p {
+    font-size: 12px;
+  }
+  .course h1 {
+    font-size: 1.8rem;
+  }
+  .course p {
+    font-size: 12px;
+  }
+  .gallery h1 {
+    font-size: 1.8rem;
+  }
+  .gallery p {
+    font-size: 12px;
+  }
+  .more h2 {
+    font-size: 18px;
+  }
+  .more p {
+    font-size: 10px;
+  }
+  .discovber h1 {
+    font-size: 15px;
+  }
+  .discovber p {
+    font-size: 11px;
+  }
+  .discovber .btn1 {
+    height: 38px;
+    width: 40%;
+  }
+  .client-c img {
+    width: 80px !important;
+  }
+  .c-col-about {
+    height: 155px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
